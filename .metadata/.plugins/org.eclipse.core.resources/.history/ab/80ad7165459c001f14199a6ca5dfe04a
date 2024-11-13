@@ -1,8 +1,0 @@
-package myCompany;
-
-public class Main {
-    public static void main(String[] args) {
-	Manager m1 = new Manager(1992212, "Johnson", 1000, 27, 140);
-	m1.showEmployeeInfor();
-    }
-}
