@@ -1,0 +1,39 @@
+package newPackage2;
+
+import java.util.Scanner;
+
+public class WordCount {
+    public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int countWord = 0;
+	int countCharacter = 0;
+	String word = "";
+	System.out.print("Please enter your text here : ");
+	word = sc.next();
+	word = word.trim();
+
+	System.out.println(word);
+	char[] charword = word.toCharArray();
+	System.out.println(charword.length);
+	for (int i = 0; i < charword.length; i++) {
+	    System.out.println(i);
+	    if (charword[i] != ' ') {
+		for (int j = i + 1; j < charword.length; j++) {
+		    if (charword[j] != ' ' && i == charword.length - 1) {
+			countWord += 1;
+			continue;
+		    } else if (charword[j] != ' ' && i < charword.length - 1) {
+			countCharacter += 1;
+			continue;
+		    } else if (charword[j] == ' ') {
+			countWord += 1;
+			i = j;
+			continue;
+		    }
+
+		}
+	    }
+	}
+	System.out.println("Word Count = " + countWord);
+    }
+}

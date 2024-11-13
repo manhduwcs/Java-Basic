@@ -1,0 +1,11 @@
+package truePackage1;
+
+public class StaticAndNormalVariable {
+	static int st_num1 = 11;
+
+	public static void main(String[] args) {
+		int num2 = 10;
+		System.out.println("truoc thay doi : " + st_num1 + " ; " + num2);
+		System.out.println("sau thay doi: " + st_num1 + " ; " + num2);
+	}
+}

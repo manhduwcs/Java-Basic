@@ -1,0 +1,14 @@
+package truePackage1;
+
+public class StaticAndNormalVariable {
+	static int ix = 999;
+
+	public static void main(String[] args) {
+		int ix = 11;
+		ix = 12;
+		System.out.println(ix);
+		System.out.println(StaticAndNormalVariable.ix);
+		StaticAndNormalVariable.ix = 11;
+		System.out.println(StaticAndNormalVariable.ix);
+	}
+}

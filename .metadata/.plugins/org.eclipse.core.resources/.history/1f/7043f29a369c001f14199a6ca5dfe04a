@@ -1,0 +1,62 @@
+package myCompany;
+
+public class Employee extends Person {
+    private String position;
+    private double salary;
+    private int hoursWorked;
+    private double tax;
+    private double rate;
+    
+    public Employee(String position,String name, int age, double salary, int hoursWorked, double tax, double rate) {
+	super(name, age);
+	this.position = position;
+	this.salary = salary;
+	this.hoursWorked = hoursWorked;
+	this.tax = tax;
+	this.rate = rate;
+    }
+    
+    
+    public String getPosition() {
+	return this.position;
+    }
+    
+    public void setPosition(String position) {
+	this.position = position;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public int getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(int hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
+
+    public double getTax() {
+        return tax;
+    }
+
+    public void setTax(double tax) {
+        this.tax = tax;
+    }
+
+    public double getRate() {
+        return rate;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+    
+    
+    
+}

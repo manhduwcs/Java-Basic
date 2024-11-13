@@ -1,0 +1,23 @@
+package ohmygod;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int option = 0;
+
+	while (option != 7) {
+	    try {
+		System.out.println("Menu :");
+		System.out.println("\t1:Them sach.\t2:Them thanh vien.\t3:Muon sach");
+		System.out.println("\t4:Tra sach.\t5:Hien thi thu vien sach.");
+		System.out.println("\t6:Hien thi sach thanh vien da muon.\t7: Thoat chuong trinh.");
+		option = sc.nextInt();
+
+	    } catch (Exception e) {
+		System.out.println("Loi : Nhap sai lua chon. Nhap lai !");
+	    }
+	}
+    }
+}

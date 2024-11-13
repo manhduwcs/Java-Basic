@@ -1,0 +1,10 @@
+package ohbabe;
+
+public class Test {
+    public static void main(String[] args) {
+	Book b1 = new Book("The Redemption", true);
+	LibraryMember mem1 = new LibraryMember("Johnson Baby");
+	mem1.borrowBook(b1);
+
+    }
+}

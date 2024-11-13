@@ -1,0 +1,62 @@
+package ohmygod;
+
+import java.util.ArrayList;
+
+public class Library {
+    private ArrayList<LibraryItem> items;
+    private ArrayList<LibraryMember> members;
+
+    public Library() {
+	items = new ArrayList<LibraryItem>();
+	members = new ArrayList<LibraryMember>();
+    }
+
+    public void addItem(LibraryItem item) {
+	if (item != null && item instanceof Book) {
+	    Book book = (Book) item;
+	    items.add(book);
+	}
+	return;
+    }
+
+    public void addMember(LibraryMember member) {
+	if (member != null) {
+	    members.add(member);
+	}
+	return;
+    }
+
+    public LibraryItem searchItem(String itemName) {
+	for (LibraryItem item : items) {
+	    if (item.getTitle().equals(itemName)) {
+		return item;
+	    }
+	}
+	return null;
+    }
+
+    public LibraryMember searchMember(String memberName) {
+	for (LibraryMember member : members) {
+	    if (member.getMemberName().equals(memberName)) {
+		return member;
+	    }
+	}
+	return null;
+    }
+
+    public void borrowItem(LibraryMember member, LibraryItem item) {
+	member.borrowItem(item);
+    }
+
+    public void returnItem(LibraryMember member, LibraryItem item) {
+	member.returnItem(item);
+    }
+
+    public void showAllItems() {
+	System.out.println("Danh sach sach trong thu vien : ");
+	for (LibraryItem item : items) {
+	    System.out.println("\tTen sach : " + item.getTitle());
+	    System.out.println("\tTrang thai : " + item.isAvailable());
+	}
+    }
+}

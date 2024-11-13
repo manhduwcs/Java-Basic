@@ -1,0 +1,13 @@
+package myPackage1;
+
+public class CircleCalculate {
+	public static void main(String[] args) {
+		int r = (int) (Math.random() * 100);
+		System.out.println("Random Number = " + r);
+		if (r % 2 == 0) {
+			System.out.println("Even number !");
+		} else {
+			System.out.println("Odd number !");
+		}
+	}
+}

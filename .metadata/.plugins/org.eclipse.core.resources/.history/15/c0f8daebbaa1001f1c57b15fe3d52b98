@@ -1,0 +1,18 @@
+package truePackage2;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
+public class FunctionalProgram {
+    public static Function<Integer, Function<Integer, Integer>> add = a -> b -> (a + b);
+
+    public void curry() {
+	BiFunction<Integer, Integer, Integer> adder = (x, y) -> x + y;
+    }
+
+    public static void main(String[] args) {
+	add.apply(10);
+	Function<Integer, Integer> addfive = add.apply(5);
+	System.out.println(addfive);
+    }
+}

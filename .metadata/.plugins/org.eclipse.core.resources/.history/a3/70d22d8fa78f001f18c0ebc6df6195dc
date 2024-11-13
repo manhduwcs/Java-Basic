@@ -1,0 +1,15 @@
+package myPackage1;
+
+import java.util.Scanner;
+
+public class CircleCalculate {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double R;
+		System.out.print("Circle Radius ( R ) = ");
+		R = sc.nextDouble();
+
+		System.out.println("Circle Area = " + Math.PI * Math.pow(R, 2));
+		System.out.println("Circle Circumference = " + 2 * Math.PI * R);
+	}
+}

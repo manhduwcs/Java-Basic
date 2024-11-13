@@ -1,0 +1,54 @@
+package ohmygod;
+
+public class Book implements LibraryItem {
+    private String title;
+    private String author;
+    private boolean available;
+
+    public Book(String title, String author, boolean available) {
+	this.title = title;
+	this.author = author;
+	this.available = available;
+    }
+
+    public void setAvailable(boolean Available) {
+	this.available = available;
+    }
+
+    @Override
+    public String getTitle() {
+	return this.title;
+    }
+
+    public String getAuthor() {
+	return this.author;
+    }
+
+    @Override
+    public boolean isAvailable() {
+	return this.available;
+    }
+
+    @Override
+    public void borrowItem() {
+	if (this.available == false) {
+	    System.out.println("Sach " + this.title + " khong the cho muon !");
+	    return;
+	} else {
+	    setAvailable(false);
+	    System.out.println("Muon sach " + this.title + " thanh cong.");
+	}
+    }
+
+    @Override
+    public void returnItem() {
+	if (this.available == true) {
+	    System.out.println("Loi : Sach " + this.title + " co san trong thu vien, khong the tra lai.");
+	    return;
+	} else {
+	    setAvailable(true);
+	    System.out.println("Tra sach " + this.title + " thanh cong.");
+	}
+    }
+
+}

@@ -1,0 +1,7 @@
+package myPackage1;
+
+public class BTLuongGiaoVien {
+	public static void main(String[] args) {
+		
+	}
+}
