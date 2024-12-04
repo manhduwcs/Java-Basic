@@ -12,6 +12,10 @@ public class Person {
         this.address = address;
     }
 
+    public String toString() {
+        return name + " " + age + " " + address;
+    }
+
     public void showSomething() {
         System.out.println("This is something !");
     }

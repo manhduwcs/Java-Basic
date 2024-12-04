@@ -1,6 +1,5 @@
 package truePackage1;
 
-import java.io.*;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -70,28 +69,8 @@ public class MainClass {
     }
 
     public static void main(String[] args) {
-        
-        try {
-            BufferedWriter writeMyName = new BufferedWriter(new FileWriter("myname.txt"));
-            BufferedReader reader = new BufferedReader(new FileReader("myname.txt"));
-            BufferedWriter writer = new BufferedWriter(new FileWriter("newname.txt"));
-
-            writeMyName.write("This is my name : \n");
-            writeMyName.write("Oh Shit, Johnson Baby");
-            writeMyName.close();
-
-            String line = "";
-            while ((line = reader.readLine()) != null) {
-                writer.write("Hello " + line);
-                System.out.print("Hello, " + line + "\n");
-            }
-            writer.close();
-            reader.close();
-
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Person p = new Person("Hoang", 23, "192 Kham Thien");
+        System.out.println(p);
     }
 }
 
